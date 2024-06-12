@@ -21,21 +21,21 @@ const Conversation = ({ userDetails, activeUserDetails, setActiveUserDetails }) 
 
             <div className={styles["conversation_container_middle"]}>
                 {userDetails[activeUserDetails].chat.map((item) => (
-                    <>
-                        <div className={styles["conversation_container_middle_user_wrapper"]} key={item.user.message} key={uuidv4()}>
+                    <div key={uuidv4()}>
+                        <div className={styles["conversation_container_middle_user_wrapper"]}>
                             <div className={styles["conversation_container_middle_user_message"]}>
                                 <p className={styles["conversation_container_middle_user_text"]}>{item.user.message}</p>
                                 <p className={styles["conversation_container_middle_user_timestamp"]}>{item.user.timeStamp}</p>
                             </div>
                         </div>
 
-                        <div className={styles["conversation_container_middle_other_wrapper"]} key={uuidv4()}>
+                        <div className={styles["conversation_container_middle_other_wrapper"]}>
                             <div className={styles["conversation_container_middle_other_message"]}>
                                 <p className={styles["conversation_container_middle_user_text"]}>{item.you.message}</p>
                                 <p className={styles["conversation_container_middle_user_timestamp"]}>{item.you.timeStamp}</p>
                             </div>
                         </div>
-                    </>
+                    </div>
                 ))}
             </div>
 

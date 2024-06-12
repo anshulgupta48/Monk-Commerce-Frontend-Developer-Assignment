@@ -9,6 +9,20 @@
   flex-direction: column;
   gap: 16px;
   overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e0e0e0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #8d8b8b;
+    border-radius: 6px;
+  }
 
   @media (max-width: 1000px) {
     width: 100%;
