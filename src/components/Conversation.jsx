@@ -2,12 +2,12 @@ import { v4 as uuidv4 } from 'uuid';
 import { ConversationTopFeaturesIcons, ConversationBottomFeaturesIcons, SendIcon, ChevronLeftIcon } from '../assets/export';
 import styles from '../assets/styles/conversation.module.scss';
 
-const Conversation = ({ userDetails, activeUserDetails, setActiveUserDetails }) => {
+const Conversation = ({ userDetails, activeUserDetails, setActiveUserDetails, isMobileView }) => {
     return (
         activeUserDetails >= 0 && <div className={styles["conversation_container"]}>
             <div className={styles["conversation_container_top"]}>
                 <div className={styles["conversation_container_top_left"]}>
-                    <img src={ChevronLeftIcon} alt="Chevron-Left-Icon" className={styles["conversation_container_top_left_chevron_icon"]} onClick={() => setActiveUserDetails(-1)} />
+                    {isMobileView && <img src={ChevronLeftIcon} alt="Chevron-Left-Icon" className={styles["conversation_container_top_left_chevron_icon"]} onClick={() => setActiveUserDetails(-1)} />}
                     <img src={userDetails[activeUserDetails].profilePictureURL} alt="Profile-Icon" className={styles["conversation_container_top_left_icon"]} />
 
                     <div className={styles["conversation_container_top_left_profile"]}>

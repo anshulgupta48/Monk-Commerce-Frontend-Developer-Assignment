@@ -157,7 +157,7 @@ const App = () => {
     <div className='container'>
       {(window.innerWidth >= 1000 || activeUserDetails === -1) && <ContactList userDetails={userDetails} setUserDetails={setUserDetails} activeUserDetails={activeUserDetails} setActiveUserDetails={setActiveUserDetails} />}
 
-      {(window.innerWidth >= 1000 || activeUserDetails !== -1) && <Conversation userDetails={userDetails} activeUserDetails={activeUserDetails} setActiveUserDetails={setActiveUserDetails} />}
+      {(window.innerWidth >= 1000 || activeUserDetails !== -1) && <Conversation userDetails={userDetails} activeUserDetails={activeUserDetails} setActiveUserDetails={setActiveUserDetails} isMobileView={isMobileView} />}
 
       {(!isMobileView && activeUserDetails === -1) && <p className="container_intro">Please Select a Contact to View Messages!</p>}
     </div>
