@@ -39,6 +39,7 @@ const ContactList = ({ userDetails, setUserDetails, activeUserDetails, setActive
         const updatedUserDetails = userDetails.filter((item, index) => index !== itemIndex);
         setUserDetails(updatedUserDetails);
         setActiveMoreOptionsModal(-1);
+        setActiveUserDetails(-1);
     }
 
     return (
